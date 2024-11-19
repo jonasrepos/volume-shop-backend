@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne, OneToMany, JoinColumn } from "typeorm";
-import { Category } from "./category.entity";
-import { Product } from "./product.entity";
+import { Category } from "../entities/category.entity";
+import { Product } from "../product/entities/product.entity";
+
 
 @Entity("sub_categories")
 export class SubCategory {
@@ -21,7 +22,7 @@ export class SubCategory {
 
   @Column({ name: 'deleted_at', type: "timestamp", nullable: true })  // Explicitly set column name to `deleted_at`
   deletedAt?: Date;
-  
+
   @ManyToOne(() => Category, (category) => category.subCategories)
   @JoinColumn({ name: 'parent_id' })
   parentCategory: Category;

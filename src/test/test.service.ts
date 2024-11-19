@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Category } from '../entities/category.entity';
-import { Product } from '../entities/product.entity';
+import { Product } from '../product/entities/product.entity';
 import { SubCategory } from '../entities/subCategory.entity';
 
 
@@ -15,7 +15,7 @@ export class TestService {
     private subCategoryRepository: Repository<SubCategory>,
     @InjectRepository(Product)
     private productRepository: Repository<Product>,
-  ) {}
+  ) { }
 
   async createTestData() {
     // Create a Category

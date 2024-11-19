@@ -4,7 +4,7 @@ import { TestController } from './test.controller';
 import { TestService } from './test.service';
 import { Category } from '../entities/category.entity';
 import { SubCategory } from '../entities/subCategory.entity';
-import { Product } from '../entities/product.entity';
+import { Product } from '../product/entities/product.entity';
 
 @Module({
   imports: [
@@ -13,4 +13,4 @@ import { Product } from '../entities/product.entity';
   controllers: [TestController], // Binde den Controller ein
   providers: [TestService], // Binde den Service ein
 })
-export class TestModule {}
+export class TestModule { }
