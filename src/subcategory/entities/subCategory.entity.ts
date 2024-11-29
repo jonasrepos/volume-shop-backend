@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne, OneToMany, JoinColumn } from "typeorm";
-import { Category } from "../entities/category.entity";
-import { Product } from "../product/entities/product.entity";
+import { Category } from "../../category/entities/category.entity";
+import { Product } from "../../product/entities/product.entity";
 
 
 @Entity("sub_categories")

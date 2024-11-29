@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';  // <-- Add this import
 import { Product } from './product/entities/product.entity';
-import { Category } from './entities/category.entity';
-import { SubCategory } from './entities/subCategory.entity';
+import { Category } from './category/entities/category.entity';
+import { SubCategory } from './subcategory/entities/subCategory.entity';
 
 @Module({
   imports: [

@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TestController } from './test.controller';
 import { TestService } from './test.service';
-import { Category } from '../entities/category.entity';
-import { SubCategory } from '../entities/subCategory.entity';
+import { Category } from '../category/entities/category.entity';
+import { SubCategory } from '../subcategory/entities/subCategory.entity';
 import { Product } from '../product/entities/product.entity';
 
 @Module({

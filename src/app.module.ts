@@ -6,13 +6,17 @@ import { DatabaseModule } from './database.module';
 import { TestModule } from './test/test.module';
 
 import { ProductModule } from './product/product.module';
+import { CategoryModule } from './category/category.module';
+import { SubcategoryModule } from './subcategory/subcategory.module';
 
 
 @Module({
   imports: [
     DatabaseModule,
     TestModule,
-    ProductModule,  // Your TestModule or other modules
+    ProductModule,
+    CategoryModule,
+    SubcategoryModule,  // Your TestModule or other modules
   ],
   controllers: [AppController],
   providers: [AppService],
